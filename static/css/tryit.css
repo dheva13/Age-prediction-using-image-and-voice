@@ -1,0 +1,234 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/static/images/homepage_bg.jpg') no-repeat center center fixed;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 53, 53, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+nav {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    background-color: #0b0f19;
+}
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.auth-buttons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+/* Main styles */
+main {
+    background-color: #0b0f19;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+main:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+}
+
+.prediction-form {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type=file] {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type=file]:hover, input[type=file]:focus {
+    border-color: #007bff;
+}
+
+.feature img {
+    width: 220px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 16px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Prediction results */
+.prediction-results {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.result-box {
+    background: url('/static/images/ig3.avif');
+    border: 1px solid #ececec;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 12px;
+    margin-bottom: 0px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.result-box:hover {
+    background-color: #f4f0f0;
+}
+
+.result-box p {
+    font-size: 26px;
+    margin: 0;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Spinner styles */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.uploaded-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.passport-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 25px auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+/* Social media styles */
+.social-media a img {
+    width: 24px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 14px 30px;
+        font-size: 20px;
+    }
+
+    .result-box {
+        padding: 25px;
+    }
+
+    .result-box p {
+        font-size: 22px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    input[type=file] {
+        padding: 12px;
+    }
+}
